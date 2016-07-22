@@ -1,0 +1,41 @@
+<div class="table-responsive" style="border:1px solid #cccccc;border-radius:5px; padding:15px; ">
+			  <table class="table">
+			  <h3>Subject List</h3>
+			  <a href="<?php echo base_url() ?>subject/add">
+  <span class="glyphicon glyphicon-plus"></span> Add
+</a>
+				<tr style="background:#428bca;">
+					<th>#</th>
+					<th>Name</th>
+					<th>Description</th>
+					
+					
+					<th>Options</th>
+					
+				</tr>
+				<?php $counter = 1 ?>
+				<?php foreach($subjects as $subject): ?>
+				<tr>
+					<td><?php echo $counter ?></td>
+					<td><?php echo $subject->name; ?></td>
+					<td><?php echo $subject->description; ?></td>
+					
+					<td><a href="<?php echo base_url() ?>subject/edit?id=<?php echo $subject->id ?>">Edit</a>- <a href="<?php echo base_url() ?>subject/delete?id=<?php echo $subject->id ?>">Delete</a></td>
+					
+					<?php $counter++; ?>
+				</tr>
+				<?php endforeach; ?>
+				
+			  </table>
+			   <center>
+				  	<ul class="pagination">
+					  <li><a href="#">&laquo;</a></li>
+					  <li><a href="#">1</a></li>
+					  <li><a href="#">2</a></li>
+					  <li><a href="#">3</a></li>
+					  <li><a href="#">4</a></li>
+					  <li><a href="#">5</a></li>
+					  <li><a href="#">&raquo;</a></li>
+					</ul>
+				</center>
+			</div>

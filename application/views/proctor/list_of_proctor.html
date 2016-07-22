@@ -1,0 +1,41 @@
+<div class="table-responsive" style="border:1px solid #cccccc;border-radius:5px; padding:15px; ">
+			  <table class="table">
+			  <h3>List of Proctor</h3>
+			  <a href="<?php echo base_url() ?>proctor/add">
+  <span class="glyphicon glyphicon-plus"></span> Add
+</a>
+				<tr style="background:#428bca;">
+					<th>#</th>
+					<th>Name</th>
+					
+					
+					<th>Options</th>
+				
+				</tr>
+				<?php $counter = 1 ?>
+				<?php foreach($proctors as $proctor): ?>
+				<tr>
+					<td><?php echo $counter ?></td>
+					<td><?php echo $proctor->firstName . ' '. $proctor->middleName . '. ' . $proctor->lastName; ?></td>
+					
+
+
+					<td><a href="<?php echo base_url() ?>proctor/edit?id=<?php echo $proctor->id ?>">Edit</a>- <a href="<?php echo base_url() ?>proctor/delete?id=<?php echo $proctor->id ?>">Delete</a></td>
+					
+					<?php $counter++; ?>
+				</tr>
+				<?php endforeach; ?>
+				
+			  </table>
+			   <center>
+				  	<ul class="pagination">
+					  <li><a href="#">&laquo;</a></li>
+					  <li><a href="#">1</a></li>
+					  <li><a href="#">2</a></li>
+					  <li><a href="#">3</a></li>
+					  <li><a href="#">4</a></li>
+					  <li><a href="#">5</a></li>
+					  <li><a href="#">&raquo;</a></li>
+					</ul>
+				</center>
+			</div>

@@ -1,0 +1,24 @@
+<?php if($successMessage): ?>
+
+  <div class="alert alert-success">
+  
+     
+      <p><?php echo $successMessage ?></p>
+
+  
+</div>
+
+<?php endif; ?>
+
+
+<form role="form" method="post" action="">
+  <div class="form-group">
+    <label for="coursenameinput" >Course</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Course" value="<?php echo $course->name?>">
+  </div>
+  <div class="form-group">
+    <label for="descriptionnameinput">Description</label>
+    <input type="text" class="form-control" id="description" name="description" placeholder="Description" value="<?php echo $course->description?>" >
+  </div>
+  <input type="submit" class="btn btn-default" value="Submit"></input>
+</form>

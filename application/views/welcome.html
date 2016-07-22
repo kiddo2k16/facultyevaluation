@@ -1,0 +1,129 @@
+
+<div class="form_holder"> <!--starts form_holder-->
+        	<div class="welcome_divider"> <!--starts welcome_divider-->
+            	<h5>Welcome<br /> to STI-Faculty Evaluation</h5>
+            </div><!--ends welcome_divider-->
+            
+            <div class="introduction_holder"> <!--starts introduction_holder-->
+            	<h3>Dear Students,<Br /><Br />
+STI would like to know what you think! We would like to partner with you in our continuous pursuit in
+providing our students with quality education through effective faculty members. For us to accomplish
+this objective, we would need your honest and objective feedback about your instructors. Thank You!</h3>
+            </div><!--ends introduction_holder-->
+               
+            <div class="fill_up_title"><h3>Please fill up the following below</h3></div>
+         
+                  	<form action="<?php echo base_url() ?>evaluation/process" method="post">
+                        <input type="hidden" name="uid" value="<?php echo $uid ?>" >
+                        <input type="hidden" name="currentStep" value="1" >
+                <div class="fill_up_form"> <!--starts fill_up_form-->
+                    <label for="nameoffaculty">Select a Faculty Member:</label>
+                    <select style="margin-left:158px;" name="faculty">
+                        <option value= "0">--- Select One ---</option>
+                    	<?php foreach($faculties as $faculty): ?>
+
+                            <?php if($faculty->id == $facultyId): ?>
+                                <option selected value="<?php echo $faculty->id; ?>"><?php echo $faculty->firstName ?> <?php echo $faculty->lastName?></option>
+                            <?php else:  ?>
+                                <option value="<?php echo $faculty->id; ?>"><?php echo $faculty->firstName ?> <?php echo $faculty->lastName?></option>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </select>
+                    
+                    <br />
+
+                    <label for="coursecode_program">Course Code/Program enrolled in:</label>
+                     <select name="course" style="margin-left:99px;">
+                    	<option value="0">--- Select One ---</option>
+                        <?php foreach($course as $c): ?>
+
+                            <?php if($c->id == $courseId): ?>
+                                <option selected value="<?echo $c->id; ?>"><?php echo $c->description ?></option>
+                            <?php else: ?>
+
+                                <option value="<?echo $c->id; ?>"><?php echo $c->description ?></option>
+
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </select>
+                    <br />
+
+                    
+
+                   <!-- <label for="proctorname">Select a Proctor:</label>
+                     <select name="proctor" style="margin-left:223px;">
+                    	<option value="0">--- Select One ----</option>
+                        <?php foreach($proctors as $proctor): ?>
+
+                            <?php if($proctor->id == $proctorId): ?>
+
+                             <option selected value="<?php echo $proctor->id ?>"><?php echo $proctor->firstName ?></option>
+
+                            <?php else: ?>
+                             <option value="<?php echo $proctor->id ?>"><?php echo $proctor->firstName ?></option>
+
+                            <?php endif; ?>
+
+                        <?php endforeach; ?>
+                    </select>-->
+                    
+                    <label for="subjectinput">Subject:</label>
+                     <select name="subject" style="margin-left:285px;">
+                        <option value="0">--- Select One ---</option>
+                        <?php foreach($subjects as $s): ?>
+
+                            <?php if($s->id == $subjectId): ?>
+                                <option selected value="<?echo $s->id; ?>"><?php echo $s->description ?></option>
+                            <?php else: ?>
+
+                                <option value="<?echo $s->id; ?>"><?php echo $s->description ?></option>
+
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </select>
+                    <br />
+
+                     
+                    <label for="section">Section:</label>
+                     <select name="section" style="margin-left:285px;">
+                        <option value="0">--- Select One ---</option>
+                        <?php foreach($sections as $se): ?>
+
+                            <?php if($se->id == $sectionId): ?>
+                                <option selected value="<?echo $se->id; ?>"><?php echo $se->name ?></option>
+                            <?php else: ?>
+
+                                <option value="<?echo $se->id; ?>"><?php echo $se->name ?></option>
+
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </select>
+                    <br>
+
+
+                    <label for="classschedule">Class Schedule (Day/s & Time):</label>
+                    <span class="daytimewel">----</span>
+                    <br />
+
+                    <label for="sem">Semester:</label>
+                    <span style="margin-left:270px;" class="semester"><?php echo $semester->name ?></span>
+                   
+                    <br />
+
+
+                    <label for="schoolyear">School Year:</label>
+                    <input type="text" name="schoolYear" value="<?php if($schoolYear){echo $schoolYear;}else{ echo date('Y');} ?>"  style="margin-left:253px;"/>
+                    <br />
+                    <label for="filled_date">Date:</label>
+                    <input type="date" name="date" value="<?php if($date){echo $date; }else{ echo date('Y-m-d'); }?>"  style="margin-left:306px;"/>
+                <div class="indbutton_divider"><!--starts indbutton_divider-->
+                	<input type="submit" value="Proceed" />
+                </div><!--ends indbutton_divider-->
+                </div><!--ends fill_up_form-->
+                
+                
+            </form>
+                </div><!--ends fill_up_form-->
+               
+            </form>
+        </div><!--end form_holder-->

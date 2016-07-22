@@ -1,0 +1,43 @@
+<div class="table-responsive" style="border:1px solid #cccccc;border-radius:5px; padding:15px; ">
+			  <table class="table">
+			  <h3>Course List</h3>
+			  <a href="<?php echo base_url() ?>course/add">
+  <span class="glyphicon glyphicon-plus"></span> Add
+</a>
+				<tr style="background:#428bca;">
+					<th>#</th>
+					<th>Name</th>
+					<th>Description</th>
+					
+					
+					<th>Options</th>
+					
+				</tr>
+				<?php $counter = 1 ?>
+				<?php foreach($course as $cours): ?>
+				<tr>
+					<td><?php echo $counter ?></td>
+					<td><?php echo $cours->name; ?></td>
+					<td><?php echo $cours->description; ?></td>
+					
+					<td><a href="<?php echo base_url() ?>course/edit?id=<?php echo $cours->id ?>">Edit</a>- <a href="<?php echo base_url() ?>course/delete?id=<?php echo $cours->id ?>">Delete</a></td>
+					
+					<?php $counter++; ?>
+				</tr>
+				<?php endforeach; ?>
+
+			  </table>
+
+
+				<center>
+				<ul class="pagination">
+				  <li><a href="#">&laquo;</a></li>
+				  <li><a href="#">1</a></li>
+				  <li><a href="#">2</a></li>
+				  <li><a href="#">3</a></li>
+				  <li><a href="#">4</a></li>
+				  <li><a href="#">5</a></li>
+				  <li><a href="#">&raquo;</a></li>
+				</ul>
+				</center>
+			</div>

@@ -1,0 +1,52 @@
+<div class="row">
+	<div class="col-md-4"> 
+<center>	
+<div class="fileupload fileupload-new" data-provides="fileupload">
+<div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;"></div>
+	
+	<div>
+		<span class="btn btn-default btn-file">
+			<span class="fileupload-new">Select image</span>
+			<span class="fileupload-exists">Change</span>
+		<input type="file"></span>
+		<a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+	</div>
+</div>
+</center>
+	</div><!--ends col-md-6-->
+
+	<div class="col-md-8">
+		
+		<ul class="nav nav-tabs" style="margin-bottom: 15px;">
+		  <li class="active"><a href="#Profile" data-toggle="tab">Profile</a></li>
+		  <li class=""><a href="<?php echo base_url()?>faculty/schedule/<?php echo $faculty->firstName . '.'  . $faculty->id ?>">Schedule</a></li>
+		</ul>
+
+<div id="myTabContent" class="tab-content">
+
+
+<!--Profile content-->
+
+  <div class="tab-pane fade active in" id="Profile">
+ 
+    <label for="name">Fullname : <?php  echo $faculty->firstName?> <?php echo $faculty->middleName?> <?php echo $faculty->lastName?></label>
+
+    <br>
+    <label for="stiCampus">Sti Campus : <?php echo $faculty->stiCampus?></label>
+
+    <br>
+    <label for="Sy">School Year :</label>
+
+    <br>
+    <label for="subject">Subject Handled : </label>
+
+    <br>
+    <label for="sem">Semester :</label>
+ 
+ </div> <!--ends tab-pane-->
+
+
+  
+</div>
+	</div><!--ends col-md-6-->
+</div>
