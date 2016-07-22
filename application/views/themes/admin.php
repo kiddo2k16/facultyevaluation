@@ -92,9 +92,7 @@ foreach($css_files as $file): ?>
                 <li><a href="<?php echo base_url(); ?>section" style="color:#fff;">Section</a></li>
                 
 
-
-                // Enable if updated!
-                <!--<li>
+                  <li style="pointer-events:none; opacity:0.6">
                     <a style="color:#fff;border:none;background:transparent;" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modall-sm">
                       Semester
                     </a>
@@ -111,13 +109,13 @@ foreach($css_files as $file): ?>
                             <option>2nd Semester</option>
                           </select>
                           <button type="button" class="btn btn-info" style="float:right;">Activate</button>
-                          </div><!--row
-                          </div><!--colmd4
+                          </div>
+                          </div>
                       </div>
                     </div>
                   </div>         
                 </li>
-                -->
+                
 
                 <li><a href="<?php echo base_url(); ?>logout" style="color:#fff;">Logout</a></li>
               </ul>
