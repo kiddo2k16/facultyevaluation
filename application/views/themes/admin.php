@@ -133,6 +133,3 @@ foreach($css_files as $file): ?>
 </html>
 
 
-
-overall rate 30/9/1 = 3.3
-overall rate 108/28/1 = 3.8
