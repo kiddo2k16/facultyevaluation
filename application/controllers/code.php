@@ -66,7 +66,7 @@ class Code extends Security{
 		$this->pdf->stream("codes.pdf");
 
 
-		//$this->CodeModel->DeleteTempCodes();
+		$this->CodeModel->DeleteTempCodes();
 
 	}
 
