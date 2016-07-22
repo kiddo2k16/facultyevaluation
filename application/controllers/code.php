@@ -90,7 +90,7 @@ class Code extends Security{
 
 			if($this->CodeModel->NotExists($code) && !in_array($code, $tempCodes)){
 
-				//$this->CodeModel->Save($code);
+				$this->CodeModel->Save($code);
 				$tempCodes[] = $code;
 
 				$i++;
