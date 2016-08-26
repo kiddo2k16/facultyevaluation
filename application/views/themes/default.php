@@ -57,6 +57,7 @@ foreach($css_files as $file): ?>
 
     <!--  styles -->
     <link href="<?php echo base_url(); ?>/public/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="<?php echo base_url(); ?>/public/css/mob-st.css" rel="stylesheet" media="screen">
 	 <script src="<?php echo base_url() ?>/public/js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="<?php echo base_url() ?>/public/js/bootstrap.min.js"></script>
