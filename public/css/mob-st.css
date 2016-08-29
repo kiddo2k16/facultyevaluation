@@ -1,11 +1,36 @@
+body{
+	background: 
+	linear-gradient(
+      rgba(00, 0, 0, 0.70),
+      rgba(0, 0, 0, 0.70)
+    ),
+	url(../images/bg.jpg) no-repeat center center fixed;
+	 background-size: cover;
+}
+
 .mobst{
 	width: 100%;
 	max-width: 500px;
 	position: absolute;
-	top:40%;
+	top:30%;
 	left: 34%;
+	color: #fff;
+    padding: 20px 50px;
+    font-family: Arial, Helvetica, sans-seri; 
+
 }
 
+
+.home-title h2{
+	   font-weight: 100;
+	   color: #fff;
+}
+
+.form-group label{
+	    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 14px
+}
 .mb-lg-st{
 	width: 100%;
 	max-width: 500px;
@@ -13,12 +38,19 @@
 	left:33%;
 	top:31%;
 }
-
-
-@media screen and(max-width: 320px){
+@media screen and (max-width: 320px){
 	.mobst{
-		
-		
+		width: 280px !important;
+	}
+	
+	.mb-lg-st{
+		width: 280px !important;
+	}
+}
+
+@media screen and (max-width: 400px){
+	.mobst{
+		left: 7% !important;
 		
 	}
 }
@@ -106,6 +138,8 @@
 		
 	}
 }
+
+
 
 
 

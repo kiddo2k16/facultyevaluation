@@ -66,28 +66,12 @@ foreach($css_files as $file): ?>
 
   <body>
 
-  		 <div id="header"> <!--starts header-->
-        	<li><a href="<?php echo base_url() ?>login">Panel</a></li>
-        </div> <!--ends header-->
-   		 <div class="sti_logo"> <!--starts sti_Logo-->
-    		<a href="http://www.sti.edu"><img src="<?php echo base_url(); ?>/public/images/stiLogo.png" style="width:150px;"/></a>
-  		  </div> <!--ends sti_logo-->
+  		 
+   		
      	 <div class="container" style="padding-top:50px;">
     	  <?php echo $output;?>
    		</div> <!--ends container-->
-    <div id="footer"> <!--starts footer-->
-        <div class="f_left"> <!--starts f_left-->
-        	<p>&copy; STI-Dipolog Faculty Evaluation 2014</p>
-        </div> <!--ends f_left-->
-        <div class="f_right"> <!--starts f_right-->
-        	<p>All rights reserved</p>
-        </div><!--ends f_right-->
-    </div><!--ends footer-->
     
-    <!--<div class="footer_logo"> 
-    	<img src="<?php echo base_url() ?>/public/images/footer_logo.png" />
-    </div>-->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
    
 </body>
 

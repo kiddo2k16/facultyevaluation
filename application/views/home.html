@@ -1,6 +1,11 @@
+       	
 
+        	
 <div class="row" style="margin:0 auto;">
-
+<div class="home-title">
+          <h2>Faculty Evaluation System</h2>
+          <p>a thesis 2016</p>
+         </div>
 <div class="col-lg-6 mobst" style="">
 
 <?php if(!empty($error)): ?>
@@ -14,9 +19,10 @@
 <?php endif; ?>
 
 <div class="login_form"> 
+         
           <form role="form" action="<?php echo base_url() ?>student/check" method="post">
             <div class="form-group">
-              <label for="studentCode">Student Code </label>
+              <label for="studentCode">Student Code</label>
               <input type="code" class="form-control" name="code" id="code" placeholder="Enter Code here">
             </div>
 
@@ -27,3 +33,4 @@
 
 </div>
 </div>
+
