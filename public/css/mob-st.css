@@ -7,23 +7,55 @@ body{
 	url(../images/bg.jpg) no-repeat center center fixed;
 	 background-size: cover;
 }
-
+.mobst img{
+	width: 100%;
+	max-width: 200px;
+	padding: 0px;
+	
+}
 .mobst{
 	width: 100%;
 	max-width: 500px;
 	position: absolute;
-	top:30%;
+	top:25%;
+	text-align: center;
 	left: 34%;
 	color: #fff;
     padding: 20px 50px;
     font-family: Arial, Helvetica, sans-seri; 
 
 }
+.mobst button{
+	width: 100%;
+	background: none;
+	border: 1px solid #fff;
 
+}
 
+.mobst button:hover{
+	background: #5674f0;
+	color: #fff;
+}
+.home-title{
+	text-align: center;
+	position: relative;
+	
+}
 .home-title h2{
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	font-size: 26px;
 	   font-weight: 100;
 	   color: #fff;
+}
+
+.home-title p{
+	font-style: italic;
+	font-size: 9px;
+	padding-bottom: 20px;
+	color:#fff;
+	text-transform: uppercase;
 }
 
 .form-group label{
@@ -42,7 +74,12 @@ body{
 	.mobst{
 		width: 280px !important;
 	}
-	
+	.home-title h2{
+		font-size: 15px;
+	}
+	.home-title p{
+		padding-bottom: 0;
+	}
 	.mb-lg-st{
 		width: 280px !important;
 	}
@@ -53,6 +90,13 @@ body{
 		left: 7% !important;
 		
 	}
+	
+	.home-title h2{
+		font-size: 20px;
+	}
+	.home-title p{
+		padding: 0;
+	}
 }
 
 @media screen and (max-width: 480px) {
@@ -62,6 +106,9 @@ body{
 		position: absolute;
 		left: 5%;
     }
+	.home-title h2{
+		font-size: 20px;
+	}
 	
 	.mb-lg-st{
 		left:7%;
@@ -75,6 +122,16 @@ body{
 		
 		width: 400px;
 		left:15%;		
+	}
+}
+
+@media screen and (max-width:581px){
+	.fill_up_form{
+		text-align: center;
+	}
+	.fill_up_form label{
+		display: none;
+		
 	}
 }
 
@@ -142,4 +199,12 @@ body{
 
 
 
+
+
+
+
+.st-err {
+	background:none;
+	padding-top: 50px;
+}
 

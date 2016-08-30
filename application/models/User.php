@@ -123,7 +123,7 @@ class UserAccessLevel{
 	
 
 	const  ADMIN = 'admin';
-	const FACULTY = 'faculty';
+	const  FACULTY = 'faculty';
 
 }
 

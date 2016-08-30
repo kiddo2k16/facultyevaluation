@@ -2,21 +2,15 @@
 
         	
 <div class="row" style="margin:0 auto;">
+
+<div class="col-lg-6 mobst" style="">
+
+<img src="<?php echo base_url(); ?>/public/images/home-laptop.png" />
 <div class="home-title">
           <h2>Faculty Evaluation System</h2>
           <p>a thesis 2016</p>
          </div>
-<div class="col-lg-6 mobst" style="">
 
-<?php if(!empty($error)): ?>
-<div class="alert alert-danger">
-  
-     
-      <p><?php echo $error ?></p>
-
-  
-</div>
-<?php endif; ?>
 
 <div class="login_form"> 
          
@@ -27,10 +21,20 @@
             </div>
 
             
-            <button type="submit" class="btn btn-primary">Next</button>
+            <button type="submit" class="btn btn-primary">Login</button>
           </form>
         </div><!--ends login_form-->
+<?php if(!empty($error)): ?>
+<div class="st-err">
+  
+     
+      <p><?php echo $error ?></p>
 
+  
 </div>
+<?php endif; ?>
+</div>
+
+
 </div>
 

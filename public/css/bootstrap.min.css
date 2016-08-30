@@ -154,18 +154,21 @@
 	min-height:528px;	
 }
 .form_holder_f{
-	background:url(../images/form_bg.png);
+	background:#fff;
+	padding: 0 20px;
 }
 .form_holder_f2{
-	background:url(../images/form_bg.png);
+	background: #fff;
+	padding:0 20px;
 }
 .form_holder {
 	margin:0px auto;
-	background:url(../images/form_bg.png);
-	width:920px;
-	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, .5);	
+	background:#fff;
+	width:100%;
+	box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 1);	
 	min-height:768px;
 	height:auto;	
+	padding:50px 0;
 }
 .form_holder_f h1 {
 	padding: 40px;
@@ -175,10 +178,8 @@
 	border-bottom: 2px solid #98b572;
 }
 .form_holder_f ol {
-	padding-left:80px;
 }
 .form_holder_f2 ol {
-	padding-left:80px;
 }
 .form_holder_f2 h3 {
 	font-family: smp;
@@ -207,30 +208,27 @@
 	font-size:25px;
 }
 .welcome_divider {
-	border-bottom: 2px solid #98b572;
+	border-bottom: 1px solid #dedede;
+    padding-bottom: 50px;
 }
 .welcome_divider h5{
-	padding:20px 0 0 100px;
 
 	font-family:handbold;
 	font-size:30px;
 	text-align:center;
 }
-.introduction_holder h3 {
-font-family: handreg;
-text-align: justify;
-margin-bottom:20px;
-line-height: 35px;
-padding: 0 50px 0 150px;
-}
-.fill_up_title {
-border-top: 2px solid #98b572;
-}
+
+
 .fill_up_title h3 {
-font-family: proxibold;
-text-align: center;
-padding: 10px 0 0 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    padding: 50px 0;
+    text-transform: uppercase;
+    color: #1a425d;
+    text-align: center;
+    font-size: 14px;
 }
+
 .choose-form {
 	margin:0 40px 10px 0;
 }
@@ -241,34 +239,59 @@ height: 30px;
 padding-left: 6px;
 width: 210px;
 margin: 5px 0;
-border-bottom: 2px solid #98b572;
-font-family: handreg;
+border-bottom: 1px solid #afb4a9;	
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 100;
+color: #1a425d;
+	
 }
 .fill_up_form input {
-border: 0;
-background: transparent;
-height: 30px;
-padding-left: 6px;
-width: 200px;
-margin: 5px 0;
-border-bottom: 2px solid #98b572;
-font-family: handreg;
-
+	border: 0;
+	background: transparent;
+	height: 30px;
+	padding-left: 6px;
+	width: 200px;
+	margin: 5px 0;
+	border-bottom:1px solid #777777;
+	font-family: handreg;
 }
 
 .fill_up_form {
 	margin:0 auto;
-	width: 580px;
+	width: 100%;
+	padding:0 10%;
+	max-width: 650px;
+    text-align: right;
+    font-size: 14px;
+	
+}
+
+.fill_up_form label{
+	position: relative;
+	top:15px;
+	
+	font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    color: #484b4d;
+	float: left;
+}
+
+
+
+.fill_up_form option{
+	padding:10px 0;
+	border-bottom: 1px solid #333;
 }
 .indbutton_divider {
-	height:200px;
+	text-align: center;
 }
 .indbutton_divider input {
-margin: 30px 0 0 450px;
+margin-top:20px;
 background: #09F;
 border: none;
-font-family: handreg;
-width: 100px;
+	font-family: monospace;
+width: 100%;
+	max-width: 100px;
 }
 .commntbox {
 	border-radius:9px;
@@ -288,10 +311,13 @@ width: 100px;
 	text-decoration: none;
 }
 .form_holder_f ol li {
-	padding-left: 100px;
+}
+
+.form_holder_f ol li input{
+
 }
 .form_holder_f2 ol li {
-	padding-left: 100px;
+
 }
 .daytimewel {
 	font-weight: bold;
@@ -308,7 +334,7 @@ option,select {
 .evaluationsuccess h1 {
 	
 	font-family:handbold;
-	font-size: 70px;
+	color: #fff;
 }
 .evaluationsuccess h2 {
 	color:#666;

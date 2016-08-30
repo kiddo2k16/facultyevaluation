@@ -1,15 +1,10 @@
 
 <div class="form_holder"> <!--starts form_holder-->
         	<div class="welcome_divider"> <!--starts welcome_divider-->
-            	<h5>Welcome<br /> to STI-Faculty Evaluation</h5>
+            	<h5>Faculty Evaluation</h5>
             </div><!--ends welcome_divider-->
             
-            <div class="introduction_holder"> <!--starts introduction_holder-->
-            	<h3>Dear Students,<Br /><Br />
-STI would like to know what you think! We would like to partner with you in our continuous pursuit in
-providing our students with quality education through effective faculty members. For us to accomplish
-this objective, we would need your honest and objective feedback about your instructors. Thank You!</h3>
-            </div><!--ends introduction_holder-->
+            
                
             <div class="fill_up_title"><h3>Please fill up the following below</h3></div>
          
@@ -18,8 +13,8 @@ this objective, we would need your honest and objective feedback about your inst
                         <input type="hidden" name="currentStep" value="1" >
                 <div class="fill_up_form"> <!--starts fill_up_form-->
                     <label for="nameoffaculty">Select a Faculty Member:</label>
-                    <select style="margin-left:158px;" name="faculty">
-                        <option value= "0">--- Select One ---</option>
+                    <select name="faculty">
+                        <option value= "0">--- Choose Faculty ---</option>
                     	<?php foreach($faculties as $faculty): ?>
 
                             <?php if($faculty->id == $facultyId): ?>
@@ -33,8 +28,8 @@ this objective, we would need your honest and objective feedback about your inst
                     <br />
 
                     <label for="coursecode_program">Course Code/Program enrolled in:</label>
-                     <select name="course" style="margin-left:99px;">
-                    	<option value="0">--- Select One ---</option>
+                     <select name="course">
+                    	<option value="0">--- Choose Course ---</option>
                         <?php foreach($course as $c): ?>
 
                             <?php if($c->id == $courseId): ?>
@@ -68,8 +63,8 @@ this objective, we would need your honest and objective feedback about your inst
                     </select>-->
                     
                     <label for="subjectinput">Subject:</label>
-                     <select name="subject" style="margin-left:285px;">
-                        <option value="0">--- Select One ---</option>
+                     <select name="subject">
+                        <option value="0">--- Choose Subject ---</option>
                         <?php foreach($subjects as $s): ?>
 
                             <?php if($s->id == $subjectId): ?>
@@ -85,8 +80,8 @@ this objective, we would need your honest and objective feedback about your inst
 
                      
                     <label for="section">Section:</label>
-                     <select name="section" style="margin-left:285px;">
-                        <option value="0">--- Select One ---</option>
+                     <select name="section">
+                        <option value="0">--- Choose Section ---</option>
                         <?php foreach($sections as $se): ?>
 
                             <?php if($se->id == $sectionId): ?>
@@ -100,25 +95,12 @@ this objective, we would need your honest and objective feedback about your inst
                     </select>
                     <br>
 
-
-                    <label for="classschedule">Class Schedule (Day/s & Time):</label>
-                    <span class="daytimewel">----</span>
-                    <br />
-
-                    <label for="sem">Semester:</label>
-                    <span style="margin-left:270px;" class="semester"><?php echo $semester->name ?></span>
-                   
-                    <br />
-
-
-                    <label for="schoolyear">School Year:</label>
-                    <input type="text" name="schoolYear" value="<?php if($schoolYear){echo $schoolYear;}else{ echo date('Y');} ?>"  style="margin-left:253px;"/>
                     <br />
                     <label for="filled_date">Date:</label>
-                    <input type="date" name="date" value="<?php if($date){echo $date; }else{ echo date('Y-m-d'); }?>"  style="margin-left:306px;"/>
-                <div class="indbutton_divider"><!--starts indbutton_divider-->
-                	<input type="submit" value="Proceed" />
-                </div><!--ends indbutton_divider-->
+                    <input type="date" name="date" value="<?php if($date){echo $date; }else{ echo date('Y-m-d'); }?>"/>
+                	<div class="indbutton_divider"><!--starts indbutton_divider-->
+                		<input type="submit" value="Proceed" />
+              	    </div><!--ends indbutton_divider-->
                 </div><!--ends fill_up_form-->
                 
                 
