@@ -210,7 +210,7 @@ class Evaluation extends CI_Controller{
 
 					break;
 				default:
-					# code...
+					
 					break;
 			}
 
@@ -224,12 +224,12 @@ class Evaluation extends CI_Controller{
 
 	function ShowStepOne($data){
 
-		//inlclude 'Facult.php'
+		
 
 		$this->load->Model('FacultyModel');
 		$this->load->Model('CourseModel');
 		$this->load->Model('SubjectModel');
-		$this->load->Model('SemesterModel');//hehehhe moa guro ni doihehe, save dawokmana
+		$this->load->Model('SemesterModel');
 
 		$this->load->Model('SectionModel');
 
@@ -242,8 +242,6 @@ class Evaluation extends CI_Controller{
 
 		$this->output->set_template('default');
 
-		//include "welcome.html"
-		//data = array('faculty'=>$this->Faculty->GetAll();)
 		$this->load->view("welcome.html",$data);
 
 	}

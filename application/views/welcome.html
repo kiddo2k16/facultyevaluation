@@ -11,9 +11,9 @@
                   	<form action="<?php echo base_url() ?>evaluation/process" method="post">
                         <input type="hidden" name="uid" value="<?php echo $uid ?>" >
                         <input type="hidden" name="currentStep" value="1" >
-                <div class="fill_up_form"> <!--starts fill_up_form-->
+                <div class="fill_up_form selector"> <!--starts fill_up_form-->
                     <label for="nameoffaculty">Select a Faculty Member:</label>
-                    <select name="faculty">
+                    <select name="faculty" class="require_one">
                         <option value= "0">--- Choose Faculty ---</option>
                     	<?php foreach($faculties as $faculty): ?>
 
@@ -23,11 +23,13 @@
                                 <option value="<?php echo $faculty->id; ?>"><?php echo $faculty->firstName ?> <?php echo $faculty->lastName?></option>
                             <?php endif; ?>
                         <?php endforeach; ?>
+                        
+                        
                     </select>
                     
                     <br />
 
-                    <label for="coursecode_program">Course Code/Program enrolled in:</label>
+   <!--                 <label for="coursecode_program">Course Code/Program enrolled in:</label>
                      <select name="course">
                     	<option value="0">--- Choose Course ---</option>
                         <?php foreach($course as $c): ?>
@@ -62,7 +64,7 @@
                         <?php endforeach; ?>
                     </select>-->
                     
-                    <label for="subjectinput">Subject:</label>
+     <!--               <label for="subjectinput">Subject:</label>
                      <select name="subject">
                         <option value="0">--- Choose Subject ---</option>
                         <?php foreach($subjects as $s): ?>
@@ -93,19 +95,41 @@
                             <?php endif; ?>
                         <?php endforeach; ?>
                     </select>
-                    <br>
+                    <br>-->
 
                     <br />
                     <label for="filled_date">Date:</label>
                     <input type="date" name="date" value="<?php if($date){echo $date; }else{ echo date('Y-m-d'); }?>"/>
-                	<div class="indbutton_divider"><!--starts indbutton_divider-->
-                		<input type="submit" value="Proceed" />
+                	<div class="indbutton_divider selector"><!--starts indbutton_divider-->
+                		<input type="submit" value="Proceed" id="submit" class="btn" />
               	    </div><!--ends indbutton_divider-->
                 </div><!--ends fill_up_form-->
                 
                 
             </form>
                 </div><!--ends fill_up_form-->
-               
-            </form>
-        </div><!--end form_holder-->
+       
+     
+
+
+<script type="text/javascript">
+		 
+		 var $submitButton=$('.selector .btn');
+var $selectors=$('.selector select.require_one');
+$submitButton.attr('disabled','disabled');
+
+$('.selector select.require_one').change(function(){
+  var $empty=$selectors.filter(function() { return this.value == ""; });
+   console.log("val %o    empty len %o",$(this).val(),$empty.length);
+    if ( $selectors.filter(function() { return this.value == ""; }).length == $selectors.length ){
+             $submitButton.attr('disabled','disabled');        
+    } else
+    {
+        $submitButton.removeAttr('disabled');
+    }
+});
+
+$('#submit').click(function() {
+   $('#searchform').submit(); 
+});
+</script>

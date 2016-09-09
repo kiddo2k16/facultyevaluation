@@ -69,7 +69,10 @@ body{
 	position: absolute;
 	left:33%;
 	top:31%;
+	color:#fff;
 }
+
+
 @media screen and (max-width: 320px){
 	.mobst{
 		width: 280px !important;
@@ -207,4 +210,6 @@ body{
 	background:none;
 	padding-top: 50px;
 }
+
+
 

@@ -115,7 +115,7 @@ class FacultyModel extends CI_Model{
 
 		$query = $this->db->get('faculties');
 
-		//dre gi compute
+		//compute
 		$this->db->select('ifnull(sum(profScore)/9/count(*),0) as profScore,ifnull(sum(instrucScore)/28/count(*),0) as instrucScore, count(*) as totalEvaluator',false);
 		$this->db->select('f.id as id,f.firstName as firstName, f.middleName as middleName, f.lastName as lastName, f.stiCampus as stiCampus');
 		$this->db->from('faculties f')->join('evaluation e','f.id=e.facultyId','left');
@@ -153,7 +153,7 @@ class FacultyModel extends CI_Model{
 
 
 		$faculty = array(
-							//_POST['firstName']
+						
 			'firstName' => $params['firstName'],
 			'middleName' => $params['middleName'],
 			'lastName' => $params['lastName'],
@@ -163,8 +163,6 @@ class FacultyModel extends CI_Model{
 
 		
 		$this->db->insert('faculties',$faculty);
-		//INSERT INTO(id) values ('0')
-
 		$lastInsertedID = $this->db->insert_id();
 
 
